@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="271px" height="139px" viewBox="0 0 271 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="size0.9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Customize-Detail-Copy" transform="translate(-799.000000, -430.000000)" fill="#FFFFFF">
+            <g id="Group" transform="translate(722.000000, 430.000000)">
+                <text id="In-progress…" font-family="AvenirNext-Bold, Avenir Next" font-size="43.2" font-weight="bold">
+                    <tspan x="74.0268" y="125">In progress</tspan>
+                    <tspan x="308.4732" y="125" font-family="PingFangSC-Semibold, PingFang SC" font-weight="500">…</tspan>
+                </text>
+                <g id="in-progress" transform="translate(182.000000, 0.000000)">
+                    <path d="M0,58.7616019 L25.826223,34.9993658 L25.826223,0 C41.9159024,0.00106860027 55.9535432,10.8659722 59.9143155,26.3836241 C63.8750879,41.9012761 56.749056,58.1149148 42.6099239,65.7557682 C28.4707917,73.3966217 10.9238197,70.5163903 0,58.7616019 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,400 @@
+﻿@font-face {
+    font-family: AvenirNext-Regular;
+    src: url('../../assets/fonts/AvenirNext-Regular.ttf');
+}
+
+@font-face {
+    font-family: AvenirNext-Medium;
+    src: url('../../assets/fonts/AvenirNext-Medium.ttf');
+}
+
+@font-face {
+    font-family: AvenirNext-Bold;
+    src: url('../../assets/fonts/AvenirNext-Bold.ttf');
+}
+
+body {
+    font-family: 'AvenirNext-Regular', 'Times New Roman';
+    min-width: 1296px;
+    margin: 0;
+    moz-user-select:  -moz-none;
+    -moz-user-select:  none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #F6F6F6;
+}
+
+.navbar-brand {
+    position: relative;
+    top: 21px;
+    left: 30px;
+    width: 256px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.navbar-brand-img {
+    width: 60%;
+    height: 50%;
+}
+
+.navbar-user-img {
+    height: 32px;
+    position: relative;
+}
+
+.navbar-menu {
+    position: relative;
+    top: -24px;
+    height: 20px;
+    float: right;
+    margin-right: 30px;
+}
+
+.navbar-user-menu {
+  position: relative;
+  height: 20px;
+  float: right;
+  margin-right: 30px;
+  height: 36px;
+  width: 36px;
+  overflow: hidden;
+  border-radius: 50px; 
+  top: -30px;
+  cursor: pointer;
+}
+
+.navbar-item {
+    margin-left: 30px;
+    font-size: 15px;
+    line-height: 15px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+    .navbar-item:hover {
+        color: #4432C6;
+    }
+
+.navbar-item-change-lang-1 {
+    margin-left: 30px;
+    font-size: 15px;
+    line-height: 15px;
+    cursor: pointer;
+    color: rgb(97,139,255);
+    text-decoration: none;
+}
+
+.navbar-item-change-lang-2 {
+    font-size: 15px;
+    line-height: 15px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.contain {
+    width: 1296px;
+    margin: auto;
+    position: relative;
+}
+
+    .contain > div {
+        margin-left: 98px;
+        margin-right: 98px;
+    }
+
+
+
+
+.join-bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 84px;
+    background-color: #F5F5F5;
+}
+
+    .join-bottom > a {
+        color: black;
+        text-decoration: none;
+        font-family: AvenirNext-Bold;
+        font-size: 20px;
+        line-height: 84px;
+    }
+
+.join-bottom-close {
+    position: absolute;
+    right: 50px;
+}
+
+    .join-bottom-close:hover {
+        color: #4432C6;
+    }
+
+.join-bottom-send-email {
+    position: absolute;
+    right: 150px;
+}
+
+    .join-bottom-send-email:hover {
+        color: #4432C6;
+    }
+
+.join-background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.67;
+    background-image: linear-gradient(0deg, #FF8080 0%, #638BFF 100%);
+    display: none;
+}
+
+.join {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 873px;
+    height: 309px;
+    margin: auto;
+    background-color: white;
+    z-index: 1;
+    display: none;
+}
+
+    .join p {
+        font-size: 20px;
+        margin: 40px;
+    }
+
+.join-send-email-tip {
+    font-family: AvenirNext-Medium;
+}
+
+    .join-send-email-tip > a, .join-send-email-tip > a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+        .join-send-email-tip > a:hover {
+            color: #4432C6;
+        }
+
+
+
+.footer-background {
+  background-color: #F3F3F3; 
+  margin-top: 150px;
+  position: relative;
+  min-width: 1010px;
+  width: 100%;
+}
+
+footer.footer {
+  width: 1010px;
+  margin: auto;
+  padding-bottom: 24px;
+  padding-top: 36px;
+  /*padding-left: 60px;*/
+
+  position: relative;
+  height: 260px;
+  background-color: #F3F3F3;
+}
+
+footer.sub-footer p {
+  text-align: right;
+}
+
+footer.sub-footer p a {
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.footer-icon {
+  position: absolute;
+  height: 150px;
+  width: 250px;
+}
+
+.footer-icon-desc {
+  position: absolute;
+  left: 46px;
+  top: 2px;
+  font-size: 20px;
+  color: rgba(15, 19, 18, 0.91);
+  letter-spacing: 1px;
+}
+
+
+
+.footer-icon-stepbeats {
+  height: 30px;
+  top: 15px;
+  position: absolute;
+}
+
+.footer-icon-share {
+  position: absolute;
+  width: 150px;
+  height: 25px;
+  top: 110px;
+}
+
+.footer-icon-share-facebook {
+  left: 5px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/facebook.png);
+  background-size: cover;
+}
+
+.footer-icon-share-facebook:hover {
+  left: 5px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/facebook-hover.png);
+  background-size: cover;
+}
+
+.footer-icon-share-twitter {
+  left: 45px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/twitter.png);
+  background-size: cover;
+}
+
+.footer-icon-share-twitter:hover {
+  left: 45px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/twitter-hover.png);
+  background-size: cover;
+}
+
+.footer-icon-share-wechat {
+  left: 85px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/wechat.png);
+  background-size: cover;
+}
+
+.footer-icon-share-wechat:hover {
+  left: 85px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/wechat-hover.png);
+  background-size: cover;
+}
+
+.footer-icon-share-weibo {
+  left: 125px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/weibo.png);
+  background-size: cover;
+}
+
+.footer-icon-share-weibo:hover {
+  left: 125px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/images/icon/weibo-hover.png);
+  background-size: cover;
+}
+
+.footer-product-title {
+    font-family: PingFangSC-Medium;
+  position: absolute;
+  left: 400px;
+  top: 45px;
+  font-size: 15px;
+  color: #0F1312;
+  letter-spacing: 1px;
+}
+
+.footer-product-stepbeats {
+  position: absolute;
+  left: 400px;
+  top: 115px;
+  font-size: 15px;
+  color: #0F1312;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+  .footer-product-stepbeats:hover {
+    color: #4432C6;
+  }
+
+
+.footer-product-stepbeats-desc {
+  position: absolute;
+  left: 400px;
+  top: 132px;
+  font-size: 15px;
+  color: rgba(15,19,18,0.54);
+  letter-spacing: 1px;
+}
+
+.footer-contact-contact-us {
+    font-family: PingFangSC-Medium;
+  position: absolute;
+  left: 800px;
+  top: 45px;
+  font-size: 15px;
+  color: #0F1312;
+  letter-spacing: 1px;
+}
+
+.footer-contact-telephone {
+  position: absolute;
+  left: 800px;
+  top: 105px;
+  font-size: 15px;
+  color: rgba(15,19,18,0.54);
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.footer-contact-mail {
+  position: absolute;
+  left: 800px;
+  top: 132px;
+  font-size: 15px;
+  color: rgba(15,19,18,0.54);
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.footer-copyright {
+  position: absolute;
+  left: 400px;
+  top: 190px;
+  font-size: 15px;
+  color: rgba(15,19,18,0.54);
+  letter-spacing: 1px;
+}

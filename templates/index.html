@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>AutoAds</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="\static\css/global.css">
+        <script src="\static\js/jquery.min.js"></script>
+        <script src="\static\js/demo.js"></script>
+        <script src="\static\js/index.js"></script>
+    </head>
+    <body>
+
+        <!--<div class="navbar" style="position:fixed;z-index:1;background:rgba(0,0,0,0.5);">-->
+            <!--<div class="navbar-brand" onclick="goToIndex()">-->
+                <!--<img class="navbar-brand-img" id="navbar-logo" src="\static\assets/images/logo.svg"/>-->
+            <!--</div>-->
+            <!--<div class="navbar-user-menu" onclick="login()">-->
+                <!--&lt;!&ndash; <a class="navbar-item" href="../assets/images/about.html">about MadDelta</a> &ndash;&gt;-->
+                <!--<img class="navbar-user-img" id="avatar-small" src="\static\assets/images/login.png">-->
+            <!--</div>-->
+            <!--<div class="navbar-menu">-->
+                <!--&lt;!&ndash; <a class="navbar-item" href="../assets/images/about.html">about MadDelta</a> &ndash;&gt;-->
+                <!--<a class="navbar-item" href="demo.html">AI作曲</a>-->
+                <!--<a class="navbar-item" onclick="goToCustom()">音乐定制</a>-->
+                <!--&lt;!&ndash; <a class="navbar-item" href="javascript:showJoin(true)">合作案例</a> &ndash;&gt;-->
+                <!--<a class="navbar-item" href="javascript:wechatContact()">联系我们</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="wechat-contact">-->
+            <!--<img class="wechat-contact" src="\static\assets/images/wechat-contact.png"/>-->
+        <!--</div>-->
+        <div class="sub-contain" style="margin-left: auto; margin-right: auto; width: 1440px; height: 100%;">
+
+
+
+            <div class="page-1">
+
+                <div class="page-line" style="top: 200px"></div>
+                <div class="page-title" style="top: 220px">
+                    Auto.Ads<br>自动广告生成系统
+                </div>
+                <div class="page-1-description">
+                    {% for result in results %}
+                    {{result}}
+                    {% endfor %}
+                </div>
+
+                <div class="position-button">
+                    <div class="position-button-dot" onclick="goToPageOne()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-dark-solid.png" style="top: 0px"></img>
+                    </div>
+                    <div class="position-button-dot" onclick="goToPageTwo()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-dark.png" style="top: 50px"></img>
+                    </div>
+                    <div class="position-button-dot" onclick="goToPageThree()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-dark.png" style="top: 100px"></img>
+                    </div>
+                    <!--<div class="position-button-dot" onclick="goToPageFour()">-->
+                        <!--<img class="position-button-dot" src="\static\assets/images/oval-dark.png" style="top: 150px"></img>-->
+                    <!--</div>-->
+                </div>
+
+                <div class="position-button-start">
+                    <p>+ 开始生成</p>
+                </div>
+                <form method="post" action="/savefile/" enctype="multipart/form-data">  <!--上传文件必须要加的-->
+                    <div class="image-upload">
+                        <img id="image-content" class="image-upload-content" src="\static\assets/images/image-icon.png">
+                        <!--<textarea class="text-box" type="text"></textarea>-->
+                        <input type="file" name="image" id="image" class="image-edit" accept="image/*" onchange="uploadImage()"/>
+                    </div>
+                    <input class="submit" type="submit" value="上传"/>
+                </form>
+
+
+                <!-- <img class="position-button-next" src="../assets/images/scrow.png"></img> -->
+            </div>
+            <div class="page-2">
+                <div class="page-line" style="background: #000000"></div>
+                <div class="page-title" style="color: #000000; font-size: 48px">
+                    提供多种场景生成
+                </div>
+                <div class="page-2-class">
+                    <img class="page-2-class-image" src="\static\assets/images/index-short-video.png"></img>
+                    <img class="page-2-class-image" src="\static\assets/images/index-game.png"></img>
+                    <img class="page-2-class-image" src="\static\assets/images/index-others.png"></img>
+                    <!-- <div class="page-2-class-video">
+                        <img class="page-2-class-image" src="../assets/images/index-short-video.png"></img>
+                        <div class="page-2-class-video-desc"></div>
+                    </div>
+                    <div class="page-2-class-game">
+                        <img class="page-2-class-image" src="../assets/images/index-game.png"></img>
+                        <div class="page-2-class-game-desc"></div>
+                    </div>
+                    <div class="page-2-class-others">
+                        <img class="page-2-class-image" src="../assets/images/index-others.png"></img>
+                        <div class="page-2-class-others-desc"></div>
+                    </div> -->
+                </div>
+                <div class="position-button">
+                    <div class="position-button-dot" onclick="goToPageOne()">
+                        <img class="position-button-dot" src="\static\assets/images/oval.png" style="top: -240px"></img>
+                    </div>
+                    <div class="position-button-dot" onclick="goToPageTwo()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-solid.png" style="top: -190px"></img>
+                    </div>
+                    <div class="position-button-dot" onclick="goToPageThree()">
+                        <img class="position-button-dot" src="\static\assets/images/oval.png" style="top: -140px"></img>
+                    </div>
+                    <!--<div class="position-button-dot" onclick="goToPageFour()">-->
+                        <!--<img class="position-button-dot" src="\static\assets/images/oval.png" style="top: -90px"></img>-->
+                    <!--</div>-->
+                </div>
+                
+                <!-- <div class="position-button-case-desc">更多案例</div> -->
+                <div class="position-button-case"></div>
+            </div>
+            <div class="page-3">
+
+                <div class="page-line"></div>
+                <div class="page-title" style="font-size: 48px">
+                    为什么使用AutoAds？
+                </div>
+                <div class="page-3-left">
+                    <div class="page-3-left-para">
+                        <p class="page-3-left-title">快速生成</p>
+                        <img class="page-3-icon" src="\static\assets/images/page-3-icon-1.png" />
+                        <p class="page-3-left-para-desc">AI赋能，生成广告词从未有过的便捷。
+                        </p>
+                    </div>
+                    <div class="page-3-left-para">
+                        <p class="page-3-left-title">语句多样</p>
+                        <img class="page-3-icon" src="\static\assets/images/page-3-icon-2.png" />
+                        <p class="page-3-left-para-desc">
+                            AI赋能，通过生成对抗网络，生成多样性的广告语句。
+                        </p>
+                    </div>
+                    <div class="page-3-left-para">
+                        <p class="page-3-left-title">成本低廉</p>
+                        <img class="page-3-icon" src="\static\assets/images/page-3-icon-3.png" />
+                        <p class="page-3-left-para-desc">
+                            AI赋能，自动生成节省了人力资源。
+                        </p>
+                    </div>
+                </div>
+                <img class="page-3-right" src="\static\assets/images/page-3-right.png"></img>
+                
+                <div class="position-button">
+                    <div class="position-button-dot" onclick="goToPageOne()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-dark.png" style="top: 100px"></img>
+                    </div>
+                    <div class="position-button-dot" onclick="goToPageTwo()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-dark.png" style="top: 150px"></img>
+                    </div>
+                    <div class="position-button-dot" onclick="goToPageThree()">
+                        <img class="position-button-dot" src="\static\assets/images/oval-dark-solid.png" style="top: 200px"></img>
+                    </div>
+                    <!--<div class="position-button-dot" onclick="goToPageFour()">-->
+                        <!--<img class="position-button-dot" src="\static\assets/images/oval-dark.png" style="top: 250px"></img>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <!--<div class="page-4">-->
+
+
+                 <!--<div class="position-button">-->
+                        <!--<div class="position-button-dot" onclick="goToPageOne()">-->
+                            <!--<img class="position-button-dot" src="\static\assets/images/oval.png" style="top: 200px"></img>-->
+                        <!--</div>-->
+                        <!--<div class="position-button-dot" onclick="goToPageTwo()">-->
+                            <!--<img class="position-button-dot" src="\static\assets/images/oval.png" style="top: 250px"></img>-->
+                        <!--</div>-->
+                        <!--<div class="position-button-dot" onclick="goToPageThree()">-->
+                            <!--<img class="position-button-dot" src="\static\assets/images/oval.png" style="top: 300px"></img>-->
+                        <!--</div>-->
+                        <!--<div class="position-button-dot" onclick="goToPageFour()">-->
+                            <!--<img class="position-button-dot" src="\static\assets/images/oval-solid.png" style="top: 350px"></img>-->
+                        <!--</div>-->
+                    <!--</div>-->
+            <!--</div>-->
+            <!--<div class="page-4">-->
+                <!--&lt;!&ndash;<img class="page-4-back-img" src="\static\assets/images/page-4-image.png"></img>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="position-button-start" style="left: -webkit-calc(50% - 50px); top: -80px" onclick="goToCustom()">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p>+ 开始创作</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="page-4-compose-desc">&ndash;&gt;-->
+                    <!--&lt;!&ndash;AI赋能，带来真正的价值。与极佳的音乐质量配套的是并不高昂的价格，我们希望AI真正为彼此创造价值。&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                 <!---->
+
+                <!--<div class="footer-background" style="background-color: transparent; margin-top: 100px;">-->
+                    <!--<footer class="footer" style="background-color: transparent;height: 0px">-->
+
+                        <!--<div class="footer-icon">-->
+                            <!--<img class="footer-icon-stepbeats" src="\static\assets/images/footer-logo.png">-->
+                            <!--<div class="footer-icon-share">-->
+                                <!--<a class="footer-icon-share-facebook"></a>-->
+                                <!---->
+                                <!--<a class="footer-icon-share-twitter"></a>-->
+                                <!---->
+                                <!--<a class="footer-icon-share-wechat"></a>-->
+                                <!---->
+                                <!--<a class="footer-icon-share-weibo"></a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<p class="footer-product-title">-->
+                            <!--Other product-->
+                        <!--</p>-->
+                        <!--<a class="footer-product-stepbeats"  href="https://stepbeats.io">-->
+                            <!--StepBeats-->
+                        <!--</a>-->
+                        <!--<p class="footer-product-stepbeats-desc">-->
+                            <!--Run to create music-->
+                        <!--</p>-->
+                        <!--<p class="footer-contact-contact-us">-->
+                            <!--Contact us-->
+                        <!--</p>-->
+                        <!--<p class="footer-contact-telephone">-->
+                            <!--Tel: (+86)18143465181-->
+                        <!--</p>-->
+                        <!--<p class="footer-contact-mail">-->
+                            <!--Mail: public@stepbeats.cn-->
+                        <!--</p>-->
+                        <!--<p class="footer-copyright">-->
+                            <!--© 2018 Hangzhou EnjoyMusic Technology Co., Ltd. All rights reserved.-->
+                        <!--</p>-->
+                    <!--</footer>-->
+
+                    <!---->
+                <!--</div>-->
+            <!--</div>-->
+            
+        </div>
+    </div>
+</body>
+</html>
